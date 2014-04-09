@@ -45,10 +45,10 @@
   </build>
 
   <modules>
-    <module>utils</module>
-    <module>data</module>
-    <module>service</module>
-    <module>web</module>
+    <module>Utils</module>
+    <module>Data</module>
+    <module>Service</module>
+    <module>Web</module>
   </modules>
 	<profiles>
 		<profile>
