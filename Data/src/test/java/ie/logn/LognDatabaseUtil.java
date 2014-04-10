@@ -23,10 +23,6 @@ public class LognDatabaseUtil {
 	private static final String SQL_CREATE_HSQL_TABLES = "../Data/src/main/sql/lognleagues.sql";
 	private static final String SQL_DROP_HSQL_TABLES = "../Data/src/main/sql/drop_lognleagues.sql";
 
-	private static final String SQL_CREATE_ORA_INGCVA_TABLES = "../Data/src/main/sql/lognleagues_oracle.sql";
-	private static final String SQL_DROP_ORA_INGCVA_TABLES = "../Data/src/main/sql/drop_lognleagues_oracle.sql";
-	private static final String SQL_EMPTY_ORA_INGCVA_TABLES = "../Data/src/main/sql/test_empty_tables.sql";
-
 	private static final String HSQL_DB_DRIVER = "org.hsqldb.jdbcDriver";
 	private static final String HSQL_FILE_URL = "jdbc:hsqldb:file:";
 	private static final String HSQL_IN_MEM_URL = "jdbc:hsqldb:mem:";
@@ -58,14 +54,11 @@ public class LognDatabaseUtil {
 		@Override
 		public void createTables(Connection con) throws FileNotFoundException,
 				SQLException {
-			// DatabaseUtil.runScript(con, SQL_CREATE_ORA_INGCVA_TABLES);
 		}
 
 		@Override
 		public void dropTables(Connection connection)
 				throws FileNotFoundException, SQLException {
-			// DatabaseUtil.runScript(con, SQL_DROP_ORA_INGCVA_TABLES, true);
-			// emptyTables(connection);
 		}
 
 		@Override
@@ -167,21 +160,5 @@ public class LognDatabaseUtil {
 		Connection connection = ds.getConnection();
 		dropTables(connection);
 		connection.close();
-	}
-
-	public static void emptyTables(Connection connection) {
-		String delim = ";\\n";
-		try {
-			DatabaseUtil.runScript(connection, SQL_EMPTY_ORA_INGCVA_TABLES,
-					delim, true, null);
-		} catch (FileNotFoundException e) {
-			System.err
-					.println("Error while emptying tables: " + e.getMessage());
-			e.printStackTrace();
-		} catch (SQLException e1) {
-			System.err.println("Error while emptying tables: "
-					+ e1.getMessage());
-			e1.printStackTrace();
-		}
 	}
 }

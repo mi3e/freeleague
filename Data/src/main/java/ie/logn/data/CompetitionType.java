@@ -1,6 +1,5 @@
 package ie.logn.data;
 
 public enum CompetitionType {
-	league,
-	cup
+	league, cup, friendly, unknown
 }
