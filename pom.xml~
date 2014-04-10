@@ -45,10 +45,10 @@
   </build>
 
   <modules>
-    <module>Utils</module>
-    <module>Data</module>
-    <module>Service</module>
-    <module>Web</module>
+    <module>utils</module>
+    <module>data</module>
+    <module>service</module>
+    <module>web</module>
   </modules>
 	<profiles>
 		<profile>
@@ -157,11 +157,12 @@
         <artifactId>itext</artifactId>
         <version>1.4.8</version>
       </dependency>
-	  <dependency>
-	    <groupId>javax.servlet</groupId>
-		<artifactId>javax.servlet-api</artifactId>
-		<version>3.1.0</version>
-	  </dependency>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>2.4</version>
+        <scope>provided</scope>
+      </dependency>
       <dependency>
         <groupId>javax.servlet.jsp</groupId>
         <artifactId>jsp-api</artifactId>

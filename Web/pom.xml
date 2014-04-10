@@ -10,31 +10,31 @@
 	<parent>
 		<artifactId>LognLeagues</artifactId>
 		<groupId>ie.logn</groupId>
-	    <version>1.0.0</version>
+		<version>1.0.0</version>
 		<relativePath>..</relativePath>
 	</parent>
 	<packaging>war</packaging>
-	
+
 	<build>
-	<finalName>LognLeagues</finalName>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
-        </configuration>
-        <version>2.3.2</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>2.1.1</version>
-        <configuration>
-          <usecache>false</usecache>
-          <!-- webXml>src/main/webapp/WEB-INF/web.xml</webXml -->
-          <attachClasses>true</attachClasses>
+		<finalName>LognLeagues</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+				<version>2.3.2</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<configuration>
+					<usecache>false</usecache>
+					<!-- webXml>src/main/webapp/WEB-INF/web.xml</webXml -->
+					<attachClasses>true</attachClasses>
 					<archive>
 						<manifest>
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
@@ -42,26 +42,26 @@
 						<manifestEntries>
 							<git-SHA-1>${buildNumber}</git-SHA-1>
 							<branch-name>${scmBranch}</branch-name>
-							<time>${timestamp}</time>					
+							<time>${timestamp}</time>
 						</manifestEntries>
 					</archive>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-eclipse-plugin</artifactId>
-        <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
-          <downloadSources>true</downloadSources>
-        </configuration>
-        <version>2.8</version>
-      </plugin>
-    </plugins>
-    <!-- <resources> <resource> <filtering>true</filtering> <directory>src/main/resources</directory> 
-      </resource> </resources> <testResources> <testResource> <filtering>true</filtering> 
-      <directory>src/test/resources</directory> </testResource> </testResources> -->
-  </build>
-	
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<downloadSources>true</downloadSources>
+				</configuration>
+				<version>2.8</version>
+			</plugin>
+		</plugins>
+		<!-- <resources> <resource> <filtering>true</filtering> <directory>src/main/resources</directory> 
+			</resource> </resources> <testResources> <testResource> <filtering>true</filtering> 
+			<directory>src/test/resources</directory> </testResource> </testResources> -->
+	</build>
+
 
 	<dependencies>
 		<dependency>
@@ -104,6 +104,10 @@
 			<groupId>org.jumpmind.symmetric.jdbc</groupId>
 			<artifactId>mariadb-java-client</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+		</dependency>
 		<!-- Spring framework -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -121,7 +125,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 		</dependency>
-		
+
 	</dependencies>
 
 </project>

@@ -7,7 +7,7 @@
 
     <bean id="propertyConfigurer"
 	     class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-	  <property name="location" value="file:../web/src/test/resources/league.properties"/>
+	  <property name="location" value="file:../Web/src/test/resources/league.properties"/>
 	</bean>
 
 	<bean id="competitionSequenceIncrementer"
