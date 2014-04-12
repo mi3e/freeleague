@@ -72,6 +72,8 @@ public class ObjectUtils {
         }
     }
 
+    @Deprecated
+    //Should use guava or apache utils
     public static boolean isNullOrEmpty(Object a) {
         if (a == null) {
             return true;
