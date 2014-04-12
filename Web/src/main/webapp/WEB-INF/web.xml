@@ -22,12 +22,7 @@
                       http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
   version="3.0"
   metadata-complete="true">
-
-  <display-name>Welcome to Tomcat</display-name>
-  <description>
-     Welcome to Tomcat
-  </description>
-  
+    
   <servlet>
       <servlet-name>dispatcher</servlet-name>
       <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -47,15 +42,6 @@
 		</param-value>
 	</context-param>
   
-  	<!-- These are for for spring -->
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener
-		</listener-class>
-	</listener>
-	<listener>
-		<listener-class>org.springframework.web.context.request.RequestContextListener
-		</listener-class>
-	</listener>
 	<listener>
 		<listener-class>org.springframework.web.util.Log4jConfigListener
 		</listener-class>

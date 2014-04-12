@@ -6,8 +6,8 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ie.logn</groupId>
   <version>1.0.0</version>
-  <name>LognLeagues</name>
-  <artifactId>LognLeagues</artifactId>
+  <name>freeleague</name>
+  <artifactId>freeleague</artifactId>
   <packaging>pom</packaging>
 
   <properties>

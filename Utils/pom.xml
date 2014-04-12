@@ -8,7 +8,7 @@
 	<name>utils</name>
 	<url>http://www.logn.ie</url>
 	<parent>
-		<artifactId>LognLeagues</artifactId>
+		<artifactId>freeleague</artifactId>
 		<groupId>ie.logn</groupId>
 		 <version>1.0.0</version>
 		<relativePath>..</relativePath>
