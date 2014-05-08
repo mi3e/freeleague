@@ -5,6 +5,14 @@ import org.pojomatic.annotations.AutoProperty;
 
 @AutoProperty
 public abstract class BaseModel<T> implements IdAndType<T> {
+	public BaseModel(final long id) {
+		this.id = id;
+	}
+
+	public BaseModel() {
+		// used if obj not yet persisted to db
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		return Pojomatic.equals(this, o);
@@ -37,5 +45,4 @@ public abstract class BaseModel<T> implements IdAndType<T> {
 	}
 
 	protected long id;
-
 }

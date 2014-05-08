@@ -44,8 +44,8 @@ public class TestResultJdbcDao extends DatabaseTest {
 
 		fixtureDao.saveFixture(livVsManu);
 
-		Result result = new Result(livVsManu.getId(), new Score(5),
-				new Score(0));
+		Result result = new Result(livVsManu.getId(), new Score(5L), new Score(
+				0L));
 
 		resultDao.saveResult(result);
 
@@ -75,7 +75,8 @@ public class TestResultJdbcDao extends DatabaseTest {
 
 		fixtureDao.saveFixture(livVsManu);
 
-		Result result = new Result(livVsManu.getId(), Score.FIVE, Score.ZERO);
+		Result result = new Result(livVsManu.getId(), new Score(5L), new Score(
+				0L));
 
 		resultDao.saveResult(result);
 

@@ -1,36 +1,32 @@
 package ie.logn.data;
 
-public class Score {
-	
-	public Score(long goals, long points) {
-		super();
-		this.goals = goals;
-		this.points = points;
-	}
-	
-	public Score(long goals)
-	{
-		this.goals = goals;
-		this.points = LONGZERO;
-	}
-	
-	public Long getGoals() {
-		return goals;
-	}
-	public Long getPoints() {
-		return points;
-	}
-	
-	private Long goals = null;
-	private Long points = null;
+public class Score extends BaseModel<Score> {
 
-	private static Long LONGZERO = new Long(0);
-	public static Score ZERO = new Score(0);
-	public static Score ONE = new Score(1);
-	public static Score TWO = new Score(2);
-	public static Score THREE = new Score(3);
-	public static Score FOUR = new Score(4);
-	public static Score FIVE = new Score(5);
-	public static Score SIX = new Score(6);
-	public static Score SEVEN = new Score(7);
+	public Score(long id, long primaryScore, long secondaryScore) {
+		super(id);
+		this.primaryScore = primaryScore;
+		this.secondaryScore = secondaryScore;
+	}
+
+	public Score(long primaryScore, long secondaryScore) {
+		super();
+		this.primaryScore = primaryScore;
+		this.secondaryScore = secondaryScore;
+	}
+
+	public Score(long primaryScore) {
+		super();
+		this.primaryScore = primaryScore;
+	}
+
+	public long getPrimaryScore() {
+		return primaryScore;
+	}
+
+	public long getSecondaryScore() {
+		return secondaryScore;
+	}
+
+	private long primaryScore;
+	private long secondaryScore;
 }
